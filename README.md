@@ -5,8 +5,7 @@
 ## Gereksinimler
 
 - Node.js 20+
-- npm veya yarn
-- PostgreSQL (veya MongoDB)
+- npm
 
 ## Kurulum
 
@@ -20,28 +19,30 @@ npm run dev
 ```
 
 API http://localhost:5000 adresinde calisir.
+Health check: GET http://localhost:5000/health
 
 ## Scriptler
 
 | Komut | Aciklama |
 |-------|----------|
-| npm run dev | Development server (nodemon) |
-| npm run build | Production build |
-| npm start | Production server |
-| npm run lint | Lint kontrolu |
-| npm test | Testleri calistir |
-| npm run migrate | Migration calistir |
+| `npm run dev` | Development server (nodemon + ts-node) |
+| `npm run build` | TypeScript build (dist/) |
+| `npm start` | Production server |
+| `npm run lint` | TypeScript tip kontrolu |
 
-## API Dokumantasyon
+## Tech Stack
 
-Swagger: http://localhost:5000/api-docs (eger kurulduysa)
+- **Runtime:** Node.js
+- **Framework:** Express
+- **Dil:** TypeScript
+- **Hot Reload:** Nodemon
 
 ## Git Workflow
 
-- main - Production (sadece PR ile merge)
-- develop - Development
-- feature/xxx - Yeni ozellik
-- fix/xxx - Bug fix
+- `main` - Production (sadece PR ile merge)
+- `develop` - Development
+- `feature/xxx` - Yeni ozellik
+- `fix/xxx` - Bug fix
 
 ### Commit Formati
 ```
